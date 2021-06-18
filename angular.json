@@ -47,10 +47,20 @@
             "main": "apps/plance/src/main.ts",
             "polyfills": "apps/plance/src/polyfills.ts",
             "tsConfig": "apps/plance/tsconfig.app.json",
-            "aot": true,
-            "assets": ["apps/plance/src/favicon.ico", "apps/plance/src/assets"],
-            "styles": ["apps/plance/src/styles.css"],
-            "scripts": []
+            "assets": [
+              "apps/plance/src/favicon.ico",
+              "apps/plance/src/assets"
+            ],
+            "styles": [
+              "apps/plance/src/styles.css"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -80,7 +90,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -110,7 +121,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/plance"],
+          "outputs": [
+            "coverage/apps/plance"
+          ],
           "options": {
             "jestConfig": "apps/plance/jest.config.js",
             "passWithNoTests": true
@@ -139,7 +152,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/plance-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/plance-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
