@@ -47,13 +47,8 @@
             "main": "apps/plance/src/main.ts",
             "polyfills": "apps/plance/src/polyfills.ts",
             "tsConfig": "apps/plance/tsconfig.app.json",
-            "assets": [
-              "apps/plance/src/favicon.ico",
-              "apps/plance/src/assets"
-            ],
-            "styles": [
-              "apps/plance/src/styles.css"
-            ],
+            "assets": ["apps/plance/src/favicon.ico", "apps/plance/src/assets"],
+            "styles": ["apps/plance/src/styles.css"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -121,9 +116,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/plance"
-          ],
+          "outputs": ["coverage/apps/plance"],
           "options": {
             "jestConfig": "apps/plance/jest.config.js",
             "passWithNoTests": true
@@ -152,9 +145,28 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/plance-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/plance-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "speech-temp": {
+      "root": "libs/speech-temp",
+      "sourceRoot": "libs/speech-temp/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/speech-temp/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/speech-temp"],
+          "options": {
+            "jestConfig": "libs/speech-temp/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -29,6 +29,9 @@
     "plance-e2e": {
       "tags": [],
       "implicitDependencies": ["plance"]
+    },
+    "speech-temp": {
+      "tags": []
     }
   }
 }
