@@ -3,6 +3,8 @@ import * as util from 'node:util';
 import * as fs from 'fs-extra';
 import { TextToSpeechClient } from '@google-cloud/text-to-speech';
 
+// https://cloud.google.com/text-to-speech/docs/libraries#client-libraries-usage-nodejs
+// https://cloud.google.com/text-to-speech#section-2
 async function main() {
   const client = new TextToSpeechClient();
   const text = `
